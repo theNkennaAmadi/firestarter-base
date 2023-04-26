@@ -91,7 +91,7 @@ void main(  )
         starSphere		= texture( umTexture, starUV ).rgb;//chanel0
     }
 
-    float starGlow	= min( max( 1.75 - dist * ( 1. - brightness ), 0.0 ), 1.0 );
+    float starGlow	= min( max( 1.0 - dist * ( 1. - brightness ), 0.0 ), 1.0 );
     //fragColor.rgb	= vec3( r );
     gl_FragColor.rgb	= vec3( f * ( 0.75 + brightness * 0.3 ) * orange ) + starSphere + corona * orange + starGlow * orangeRed;
     gl_FragColor.a		= 1.0;
